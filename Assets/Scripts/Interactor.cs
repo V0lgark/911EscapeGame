@@ -13,8 +13,10 @@ public class Interactor : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E)){
+            
             Ray r = new Ray(InteractorSource.position, InteractorSource.forward);
-            if(Physics.Raycast(r, out RaycastHit hitInfo, InteractRange))
+            Debug.DrawRay(r.origin, r.direction * 10f, Color.red, 1f);
+            if (Physics.Raycast(r, out RaycastHit hitInfo, InteractRange))
             {
                 if(hitInfo.collider.gameObject.TryGetComponent(out IInteractable interactObj))
                 {
