@@ -1,11 +1,12 @@
-using UnityEditor;
-using UnityEngine;
+    using UnityEditor;
+    using UnityEngine;
 
-public class CubeInteraction : MonoBehaviour, IInteractable
-{
-    public void Interact()
+    public class CubeInteraction : MonoBehaviour, IInteractable
     {
-        Debug.Log("tu recuperes la clef");
-        HUDManager.Instance.ShowInteractionText("Clef swagg");
+        public void Interact()
+        {
+            Debug.Log("tu recuperes la clef");
+            HUDManager.Instance.ShowInteractionText("Clef swagg");
+            Destroy(this.gameObject);
+        }
     }
-}

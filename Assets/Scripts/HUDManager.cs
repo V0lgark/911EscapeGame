@@ -30,6 +30,7 @@ public class HUDManager : MonoBehaviour
         if (interactionText.gameObject.activeSelf)
         {
             timer -= Time.deltaTime;
+            Debug.Log(timer);
             if (timer <= 0)
             {
                 interactionText.gameObject.SetActive(false);
