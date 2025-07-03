@@ -1,4 +1,5 @@
-    using UnityEditor;
+using StarterAssets;
+using UnityEditor;
     using UnityEngine;
 
     public class CubeInteraction : MonoBehaviour, IInteractable
@@ -7,6 +8,7 @@
         {
             Debug.Log("tu recuperes la clef");
             HUDManager.Instance.ShowInteractionText("Clef swagg");
+            FirstPersonController.ajoutListe("cucul");
             Destroy(this.gameObject);
         }
     }
